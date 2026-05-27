@@ -1,0 +1,29 @@
+# This file defines a Role in Kubernetes that allows read access to pods in the "expense" namespace.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: expense
+  name: expense-pod-reader
+rules:
+- apiGroups: [""] # "" indicates the core API group
+  resources: ["pods"] # noun
+  verbs: ["get", "watch", "list"] # this read access
+---
+#roll binding to bind the above role to a user named "kavya"
+apiVersion: rbac.authorization.k8s.io/v1
+# This role binding allows "kavya" to read pods in the "expense" namespace.
+# You need to already have a Role named "expense-pod-reader" in that namespace.
+kind: RoleBinding
+metadata:
+  name: expense-read-pods
+  namespace: expense
+subjects:
+# user details to bind the above role to a user named "kavya"
+- kind: User #this must be User, Group, or ServiceAccount
+  name: kavya # "name" is case sensitive
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  # "roleRef" specifies the binding to a Role / ClusterRole
+  kind: Role #this must be Role or ClusterRole
+  name: expense-pod-reader # this must match the name of the Role or ClusterRole you wish to bind to
+  apiGroup: rbac.authorization.k8s.io
