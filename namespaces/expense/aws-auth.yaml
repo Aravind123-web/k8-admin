@@ -7,7 +7,7 @@ data:
       - system:nodes
       username: system:node:{{EC2PrivateDNSName}}
   mapUsers: |
-    - userarn: arn:aws:iam::730335564649:user/kavya
+    - userarn: arn:aws:iam::730335564649:user/kavya 
       groups:
       - system:masters
       username: kavya
@@ -16,4 +16,4 @@ metadata:
   creationTimestamp: "2026-05-27T10:11:57Z"
   name: aws-auth
   namespace: kube-system
-  uid: 167f2137-c694-48de-91fd-ecca587b2016 # don't delete this line
+  uid: 167f2137-c694-48de-91fd-ecca587b2016 # don't delete this line, this is uniqu ID
