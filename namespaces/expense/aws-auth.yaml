@@ -1,6 +1,6 @@
 apiVersion: v1
 data:
-  mmapRoles: |
+  mapRoles: |
     - rolearn: arn:aws:iam::254103026944:role/eksctl-expense-2-nodegroup-expense-NodeInstanceRole-KgrGd5JpIKhU
       groups:
       - system:bootstrappers
@@ -13,7 +13,7 @@ data:
        username: chandra
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2026-05-27T10:11:57Z"
+  creationTimestamp: "2026-07-02T07:05:18Z"
   name: aws-auth
   namespace: kube-system
-  uid: 167f2137-c694-48de-91fd-ecca587b2016 # don't delete this line, this is uniqu ID
+  uid: 7fb59517-dc7a-4c32-8b21-8d497c9bd08e # don't delete this line, this is uniqu ID
