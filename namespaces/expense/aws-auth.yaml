@@ -5,12 +5,13 @@ data:
       groups:
       - system:bootstrappers
       - system:nodes
-      username: system:node:{{EC2PrivateDNSName}}
+      username: system:node:{{EC2PrivateDNSName}} 
   mapUsers: |
-    - groups:
-      - expense-pod-reader
-      userarn: arn:aws:iam::254103026944:user/srinu
+    - userarn: arn:aws:iam::254103026944:user/srinu
       username: srinu
+      groups:
+      - expense-pod-reader
+
 kind: ConfigMap
 metadata:
   creationTimestamp: "2026-07-02T10:26:37Z"
