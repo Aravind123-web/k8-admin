@@ -23,7 +23,7 @@ metadata:
 subjects:
 # user details to bind the above role to a user named "chandra"
 - kind: User #this must be User, Group, or ServiceAccount
-  name: chandra # "name" is case sensitive
+  name: srinu # "name" is case sensitive
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   # "roleRef" specifies the binding to a Role / ClusterRole
