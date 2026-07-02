@@ -10,7 +10,7 @@ data:
     - userarn: arn:aws:iam::730335564649:user/kavya 
       groups:
       - system:masters
-      username: kavya
+      username: chandra
 kind: ConfigMap
 metadata:
   creationTimestamp: "2026-05-27T10:11:57Z"
